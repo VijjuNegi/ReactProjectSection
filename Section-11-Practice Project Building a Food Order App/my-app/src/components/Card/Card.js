@@ -1,6 +1,7 @@
 import classes from "../Css/Cards.module.css";
+import Modal from "./Modal";
 const Card = (props) => {
-  const carditems = (
+  const CardItem = (
     <ul className={classes["cart-items"]}>
       {[
         {
@@ -15,8 +16,8 @@ const Card = (props) => {
     </ul>
   );
   return (
-    <div>
-      {carditems}
+    <Modal>
+      {CardItem}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>35.60</span>
@@ -25,7 +26,7 @@ const Card = (props) => {
         <button className={classes[".button--alt"]}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 };
 export default Card;
