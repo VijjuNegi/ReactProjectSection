@@ -1,18 +1,19 @@
-import cardContext from "./CardContext";
+import CardContext from "./card-context";
+
 const CardProvider = (props) => {
   const addItemToCardHandler = (item) => {};
-  const removeItemToCardHandler = (id) => {};
+  const removeItemFromCardHandler = (id) => {};
 
   const cardContext = {
     item: [],
     totalAmount: 0,
     addItem: addItemToCardHandler,
-    removeItem: addItemToCardHandler,
+    removeItem: removeItemFromCardHandler,
   };
   return (
-    <cardContext.Provider value={cardContext}>
+    <CardContext.Provider value={cardContext}>
       {props.children}
-    </cardContext.Provider>
+    </CardContext.Provider>
   );
 };
 
