@@ -4,8 +4,11 @@ import Modal from "./Modal";
 import CardItem from "./CartItem";
 import CardContext from "../../store/card-context";
 const Card = (props) => {
+  
+  // using Context API to fetch Card Context
   const cardCtx = useContext(CardContext);
 
+  // totalAmount
   const totalAmount = `$${cardCtx.totalAmount.toFixed(2)}`;
   console.log(totalAmount);
   const hasItem = cardCtx.item.length > 0;
